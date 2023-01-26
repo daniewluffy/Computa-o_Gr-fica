@@ -1,0 +1,96 @@
+#VRML V2.0 utf8
+
+#Barras Superiores
+
+Transform {
+    children[
+        DEF Barra Shape {
+            appearance DEF White Appearance {
+                material Material {
+                    diffuseColor 1 1 1
+                }
+            }
+            geometry Cylinder {
+                height 3
+                radius 0.1
+            }
+        }
+    ]
+}
+Transform {
+    translation -7.46 0.29 0
+    rotation 0 0 1 -1.422443 #81.5°
+    scale 1 5 1
+    children[USE Barra]
+}
+Transform {
+    translation -14.5 -1.15 0
+    rotation 0 0 1 0.794125 #45.5°
+    scale 0.8 0.27 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -13.8 -1.05 0
+    rotation 0 0 1 -0.794125 #45.5°
+    scale 0.8 0.4 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -12.8 -1.025 0
+    rotation 0 0 1 0.794125 #45.5°
+    scale 0.8 0.4 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -11.7 -0.9 0
+    rotation 0 0 1 -0.794125 #45.5°
+    scale 0.8 0.55 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -10.6 -0.9 0
+    rotation 0 0 1 0.794125 #45.5°
+    scale 0.8 0.6 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -9.25 -0.68 0
+    rotation 0 0 1 -0.794125 #45.5°
+    scale 0.8 0.75 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -7.7 -0.68 0
+    rotation 0 0 1 0.794125 #45.5°
+    scale 0.8 0.8 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -5.9 -0.425 0
+    rotation 0 0 1 -0.794125 #45.5°
+    scale 0.8 1 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -3.8 -0.425 0
+    rotation 0 0 1 0.794125 #45.5°
+    scale 0.8 1 0.8
+    children[USE Barra]
+}
+Transform {
+    translation -1.4 -0.05 0
+    rotation 0 0 1 -0.794125 #45.5°
+    scale 0.8 1.35 0.8
+    children[USE Barra]
+}
+Transform {
+    translation 1.4 -0.003 0
+    rotation 0 0 1 0.794125 #45.5°
+    scale 0.9 1.37 0.9
+    children[USE Barra]
+}
+
+Viewpoint{
+    fieldOfView 1
+    position -6 0 10
+}

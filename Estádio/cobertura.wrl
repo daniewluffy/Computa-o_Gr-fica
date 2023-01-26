@@ -1,0 +1,110 @@
+#VRML V2.0 utf8
+ 
+# --------------------------------------------------------
+# Desenho de um paralelepípedo Amarelo
+# --------------------------------------------------------
+Transform {	 translation -26 11.6 0  children [
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 1 1 1    # r g b
+                }
+			}
+	geometry Box {
+		size 17 0.8 45
+	}				  
+}  ]}
+
+
+Transform {	 translation 26 11.6 0  children [
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 1 1 1    # r g b
+                }
+			}
+	geometry Box {  # define a geometria do Shape
+		size 17 0.8 45
+	}				  
+}  ]}
+
+		  Transform {	 translation 0 11.6 -15.5   children	[
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 1 1 1    # r g b
+                }
+			}
+	geometry Box {  # define a geometria do Shape
+		size 35.5 0.85 14
+	}				  
+}  ]}
+
+Transform {	 translation 0 11.6 15.5      children	[
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 1 1 1    # r g b
+                }
+			}
+	geometry Box {  # define a geometria do Shape
+		size 35.5 0.85 14
+	}				  
+}  ]}
+
+Transform {	 translation -25.9 12 15.5 rotation 0 1 0 0.68
+    children	[
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 0 0 0   # r g b
+			transparency 0.3
+                }
+			}
+	geometry Box {  # define a geometria do Shape
+		size 22 0.1 0.1
+	}				  
+}  ]}
+
+Transform {	 translation 25.9 12 -15.5 rotation 0 1 0 0.68
+    children	[
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 0 0 0   # r g b
+			transparency 0.3
+                }
+			}
+	geometry Box {  # define a geometria do Shape
+		size 22 0.1 0.1
+	}				  
+}  ]}
+
+Transform {	 translation -25.9 12 -15.5 rotation 0 1 0 -0.68
+    children	[
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 0 0 0   # r g b
+			transparency 0.3
+                }
+			}
+	geometry Box {  # define a geometria do Shape
+		size 22 0.1 0.1
+	}				  
+}  ]}
+
+Transform {	 translation 25.9 12 15.5 rotation 0 1 0 -0.68
+    children	[
+	Shape {  # define um bloco de um obejto (Shape)
+	appearance Appearance {  # define a aparência do Shape
+		material Material {
+			diffuseColor 0 0 0   # r g b
+			transparency 0.3
+                }
+			}
+	geometry Box {  # define a geometria do Shape
+		size 22 0.1 0.1
+	}				  
+}  ]}
+

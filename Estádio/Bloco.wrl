@@ -1,0 +1,433 @@
+#VRML V2.0 utf8
+
+#Lajotas
+#primeiroAndar
+#frente
+Transform{
+    translation 3.451 -1.99 2.25
+    children[
+        DEF LajotaPrimeiro Shape{
+            appearance DEF degradeprimeiro Appearance{
+                material Material{
+                    diffuseColor 0 0 0
+					transparency 0.1
+                }
+            }
+            geometry DEF lajPrimeira Box{
+                size 0.1 1.9 1.4
+            }
+        }
+		Transform{
+            translation 0 -2 -4.5
+            children[USE LajotaPrimeiro ]
+        }
+		Transform{
+            translation 0 -2 -3
+            children[USE LajotaPrimeiro ]
+        }
+		Transform{
+            translation 0 -2 -1.5
+            children[USE LajotaPrimeiro ]
+        }
+	
+        
+    ]
+}
+
+
+
+#VersoPrimeiro
+Transform{
+    translation -2.451 -1.99 2.25
+    children[USE LajotaPrimeiro
+        
+        Transform{
+            translation 0 -2 -1.5
+            children[USE LajotaPrimeiro ]
+        }
+        Transform{
+            translation 0 -2 -3
+            children[USE LajotaPrimeiro ]
+        }
+        Transform{
+            translation 0 -2 -4.5
+            children[USE LajotaPrimeiro ]
+        }
+    ]
+}
+
+#Esquerda
+Transform{
+    rotation 0 1 0 1.570796
+    scale 1 1 1.285714
+    children[USE LajotaPrimeiro
+        Transform{
+            translation -1.5 -4 -1.2
+            children[USE LajotaPrimeiro ]
+        }
+        Transform{
+            translation -1.5 -4 0.4
+            scale 1 1 1.24999781
+            children[USE LajotaPrimeiro ]
+        }
+        Transform{
+            translation -1.5 -4 2
+            scale 1 1 1
+            children[USE LajotaPrimeiro ]
+        }
+    ]
+}
+
+#Direita
+Transform{
+    translation -1.55 0 -2.951
+    rotation 0 1 0 1.570796
+    scale 1 1 1.285714
+    children[USE LajotaPrimeiro
+        Transform{
+            translation 0 -4 0
+            children[USE LajotaPrimeiro ]
+        }
+        Transform{
+            translation 0 -4 1.6
+            scale 1 1 1.24999781
+            children[USE LajotaPrimeiro ]
+        }
+        Transform{
+            translation 0 -4 3.2
+            scale 1 1 1
+            children[USE LajotaPrimeiro ]
+        }
+    ]
+}
+
+Transform{
+    translation 3.451 -1.99 2.25
+    children[
+        DEF LajotaSegundo Shape{
+            appearance DEF degradesegundo Appearance{
+                material Material{
+                    diffuseColor 0.5 0.5 0.5
+					transparency 0.1
+                }
+            }
+            geometry DEF lajSegunda Box{
+                size 0.1 1.9 1.4
+            }
+        }
+        Transform{
+            translation 0 0 -1.5
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -3
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -4.5
+            children[USE LajotaSegundo ]
+        }
+        
+    ]
+}
+
+Transform{
+    translation -2.451 -1.99 2.25
+    children[USE LajotaSegundo
+
+       Transform{
+            translation 0 0 -1.5
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -3
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -4.5
+            children[USE LajotaSegundo ]
+        }
+       
+    ]
+}
+
+Transform{
+	translation 2.7 -2 2.951
+	 rotation 0 1 0 1.570796
+    children[USE LajotaSegundo
+
+	   Transform{
+            translation 1.4 0 0
+            children[USE LajotaSegundo ]
+        }
+       Transform{
+            translation 1.4 0 -1.5
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 1.4 0 -3
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 1.4 0 -4.5
+            children[USE LajotaSegundo ]
+        }
+       
+    ]
+}
+
+Transform{
+	translation 2.7 -2 2.951
+	 rotation 0 1 0 1.570796
+    children[USE LajotaSegundo
+
+		 Transform{
+            translation 0 0 -1.5
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -3
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -4.5
+            children[USE LajotaSegundo ]
+        }
+       
+    ]
+}
+
+
+Transform{
+    translation 2.7 -2 -2.951
+	rotation 0 1 0 1.570796
+    children[USE LajotaSegundo
+
+       Transform{
+            translation 0 0 -1.5
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -3
+            children[USE LajotaSegundo ]
+        }
+        Transform{
+            translation 0 0 -4.5
+            children[USE LajotaSegundo ]
+        }
+       
+    ]
+}
+
+Transform{
+    translation 3.451 -1.99 2.25
+    children[
+        DEF LajotaTerceiro Shape{
+            appearance DEF degradeterceiro Appearance{
+                material Material{
+                    diffuseColor 0.75 0.75 0.75
+					transparency 0.1
+                }
+            }
+            geometry DEF lajTerceira Box{
+                size 0.1 1.9 1.4
+            }
+        }
+        Transform{
+            translation 0 2 -1.5
+            children[USE LajotaTerceiro]
+        }
+        Transform{
+            translation 0 2 -3
+            children[USE LajotaTerceiro]
+        }
+        Transform{
+            translation 0 2 -4.5
+            children[USE LajotaTerceiro]
+        }
+        
+    ]
+}
+
+Transform{
+    translation -2.5 -1.99 2.25
+    children[USE LajotaTerceiro
+
+       Transform{
+            translation 0 2 -1.5
+            children[USE LajotaTerceiro ]
+        }
+        Transform{
+            translation 0 2 -3
+            children[USE LajotaTerceiro ]
+        }
+        Transform{
+            translation 0 2 -4.5
+            children[USE LajotaTerceiro ]
+        }
+        
+    ]
+}
+
+Transform{
+    translation 2.7 -2 2.951
+	 rotation 0 1 0 1.570796
+    children[USE LajotaTerceiro
+		Transform{
+            translation 1.4 2 0
+            children[USE LajotaTerceiro ]
+        }
+		Transform{
+            translation 1.4 2 -1.5
+            children[USE LajotaTerceiro ]
+        }
+		Transform{
+            translation 1.4 2 -3
+            children[USE LajotaTerceiro ]
+        }
+		Transform{
+            translation 1.4 2 -4.5
+            children[USE LajotaTerceiro ]
+        }
+       
+    ]
+}
+
+Transform{
+    translation 2.7 -2 -2.951
+	 rotation 0 1 0 1.570796
+    children[USE LajotaTerceiro
+
+       Transform{
+            translation 0 2 -1.5
+            children[USE LajotaTerceiro ]
+        }
+        Transform{
+            translation 0 2 -3
+            children[USE LajotaTerceiro ]
+        }
+        Transform{
+            translation 0 2 -4.5
+            children[USE LajotaTerceiro ]
+        }
+        Transform{
+            translation 0 2 0
+            children[USE LajotaTerceiro ]
+        } 
+    ]
+}
+
+Transform{
+    translation 3.451 -1.99 2.25
+    children[
+        DEF LajotaQuarto Shape{
+            appearance DEF degradequarto Appearance{
+                material Material{
+                    diffuseColor 1 1 1
+					transparency 0.1
+                }
+            }
+            geometry DEF lajQuarta Box{
+                size 0.1 1.9 1.4
+            }
+        }
+        Transform{
+            translation 0 4 -1.5
+            children[USE LajotaQuarto ]
+        }
+        Transform{
+            translation 0 4 -3
+            children[USE LajotaQuarto ]
+        }
+        Transform{
+            translation 0 4 -4.5
+            children[USE LajotaQuarto ]
+        }
+        
+    ]
+}
+
+Transform{
+    translation -2.5 -1.99 2.25
+    children[USE LajotaQuarto
+
+       Transform{
+            translation 0 4 -1.5
+            children[USE LajotaQuarto ]
+        }
+        Transform{
+            translation 0 4 -3
+            children[USE LajotaQuarto ]
+        }
+        Transform{
+            translation 0 4 -4.5
+            children[USE LajotaQuarto ]
+        }
+        
+    ]
+}
+
+Transform{
+    translation 2 -2 2.951
+	rotation 0 1 0 1.570796
+    children[USE LajotaQuarto
+	   Transform{
+            translation 1.4 4 -2.3
+            children[USE LajotaQuarto ]
+        }
+		Transform{
+            translation 1.4 4 -0.8
+            children[USE LajotaQuarto ]
+        }
+		Transform{
+            translation 1.4 4 0.80
+            children[USE LajotaQuarto ]
+        }
+		Transform{
+            translation 1.4 4 -3.8
+            children[USE LajotaQuarto ]
+        }
+        
+    ]
+}
+
+Transform{
+    translation 2.7 -2 -2.951
+	rotation 0 1 0 1.570796
+    children[USE LajotaQuarto
+
+       Transform{
+            translation 0 4 -1.5
+            children[USE LajotaQuarto ]
+        }
+        Transform{
+            translation 0 4 -3
+            children[USE LajotaQuarto ]
+        }
+        Transform{
+            translation 0 4 -4.5
+            children[USE LajotaQuarto ]
+        }
+        Transform{
+            translation 0 4 0
+            children[USE LajotaQuarto ]
+        } 
+    ]
+}
+
+
+Transform{translation 0.5 3 -0.7
+    children[Shape{appearance Appearance{
+    material Material{diffuseColor 1 1 1} }
+    geometry Box{size 6 0.1 4.5}}    ]}
+
+	
+
+
+
+
+Viewpoint {
+    fieldOfView 1
+    position 10 15 20
+    orientation 1 0 0 -0.785398
+}

@@ -1,0 +1,412 @@
+#VRML V2.0 utf8
+
+#Campo
+Group {
+	children [
+		DEF Campo Shape {
+			appearance DEF VerdeFloresta  Appearance {
+				material Material {
+					diffuseColor 0.1333333 0.5450988 0.1333333
+				}
+			}
+			geometry Box {
+				size 105 0.2 68
+			}
+		}
+		Transform {
+			scale 1.2 1 1.05
+			children [USE Campo]
+		}
+		Transform {
+			scale 1.1 1 1.2
+			children [USE Campo]
+		}
+		Transform {
+			translation 58.05 0 35.75
+			children [
+				DEF Canto Shape {
+					appearance USE VerdeFloresta
+					geometry Cylinder {
+						height 0.2
+						radius 5
+					}
+				}
+				Transform {
+					translation 0 0 -71.5
+					children[USE Canto]
+				}
+				Transform {
+					translation -116.1 0 0
+					children[USE Canto]
+				}
+				Transform {
+					translation -116.1 0 -71.5
+					children[USE Canto]
+				}
+			]
+		}
+	]
+}
+
+#Delimitaçoes
+Group {
+	children [
+		#Círculos
+		DEF Círculo1 Shape {
+			appearance DEF White Appearance {
+				material Material {
+					diffuseColor 1 1 1
+				}
+			}
+			geometry Cylinder {
+				radius 9.15
+				height 0.21
+				bottom FALSE
+				side FALSE
+			}
+		}
+		DEF Círculo2 Shape {
+			appearance USE VerdeFloresta
+			geometry Cylinder {
+				radius 8.85
+				height 0.215
+				bottom FALSE
+				side FALSE
+			}
+		}
+		Transform {
+			scale 0.025 1.025 0.025
+			children [USE Círculo1]
+		}
+		DEF Marca_Penalt Transform {
+			translation -41.5 0 0
+			scale 0.025 1 0.025
+			children [USE Círculo1]
+		}
+		DEF Semi_Círculo Transform {
+			translation -41.5 -0.003 0
+			children [USE Círculo1
+				Transform {
+					children [USE Círculo2]
+				}
+				Transform {
+					translation -2.5 0 0
+					children [
+						DEF Esconder Shape {
+							appearance USE VerdeFloresta
+							geometry Box {
+								size 16 0.211 18.5
+							}
+						}
+					]
+				}
+			]
+		}
+		DEF Escanteio1 Transform {
+			translation -52.25 0 33.75
+			scale 0.1092896 1 0.1092896
+			children [
+				USE Círculo1
+				Transform {
+					scale 0.8 1 0.8
+					children [USE Círculo2]
+				}
+			]
+		}
+		DEF Escanteio2 Transform {
+			translation -52.25 0 -33.75
+			scale 0.1092896 1 0.1092896
+			children [
+				USE Círculo1
+				Transform {
+					scale 0.8 1 0.8
+					children [USE Círculo2]
+				}
+			]
+		}
+		Transform {
+			rotation 0 1 0 3.141593
+			children [
+				USE Marca_Penalt
+				USE Semi_Círculo
+				USE Escanteio1
+				USE Escanteio2
+			]
+		}
+		#Escanteio
+		DEF Fora_do_Campo_1 Transform {
+			translation -52.25 0.2 34.425
+			children [
+				DEF Esconder_Fora_do_Campo Shape {
+					appearance USE VerdeFloresta
+					geometry Box {
+						size 2 0 0.6
+					}
+				}
+				Transform {
+					translation -0.675 0 -0.575
+					rotation 0 1 0 1.570796
+					children [USE Esconder_Fora_do_Campo]
+				}
+			]
+		}
+		DEF Fora_do_Campo_2 Transform {
+			translation -52.25 0.2 -34.425
+			children [
+				USE Esconder_Fora_do_Campo
+				Transform {
+					translation -0.675 0 0.575
+					rotation 0 1 0 1.570796
+					children [USE Esconder_Fora_do_Campo]
+				}
+			]
+		}
+		Transform {
+			rotation 0 1 0 3.141593
+			children [
+				USE Fora_do_Campo_1
+				USE Fora_do_Campo_2
+				]
+		}
+		#Retas Verticais		
+		Transform {
+			translation 0 0.0576 0
+			children [
+				DEF Reta_Vertical Shape {
+					geometry Box {
+						size 0.25 0.1 68
+					}
+				}
+			]
+		}
+		Transform {
+			translation -52.5 0.06 0
+			children[USE Reta_Vertical
+				Transform {
+					translation 105 0 0
+					children[USE Reta_Vertical]
+				}
+			]
+		}
+		Transform {
+			translation -47 0.06 0
+			scale 1 1 0.269
+			children[USE Reta_Vertical
+				Transform {
+					translation 94 0 0
+					children[USE Reta_Vertical]
+				}
+			]
+		}
+		Transform {
+			translation -36 0.06 0
+			scale 1 1 0.592
+			children[USE Reta_Vertical
+				Transform {
+					translation 72 0 0
+					children[USE Reta_Vertical]
+				}
+			]
+		}
+		#Retas Horizontais
+		Transform {
+			translation 0 0.06 34
+			children [
+				DEF Reta_Horizontal Shape {
+					geometry Box {
+						size 105 0.1 0.25
+					}
+				}
+				Transform {
+					translation 0 0 -68
+					children[USE Reta_Horizontal]
+				}
+			]
+		}
+		Transform {
+			translation -49.75 0.06 9.15
+			scale 0.0523 1 1
+			children [USE Reta_Horizontal
+				Transform {
+					translation 0 0 -18.3
+					children[USE Reta_Horizontal]
+				}
+			]
+		}
+		Transform {
+			translation 49.75 0.06 9.15
+			scale 0.0523 1 1
+			children[USE Reta_Horizontal
+			Transform {
+					translation 0 0 -18.3
+					children[USE Reta_Horizontal]
+				}
+			]
+		}
+		Transform {
+			translation -44.25 0.06 20.15
+			scale 0.1571 1 1
+			children [USE Reta_Horizontal
+				Transform {
+					translation 0 0 -40.3
+					children[USE Reta_Horizontal]
+				}
+			]
+		}
+		Transform {
+			translation 44.25 0.06 20.15
+			scale 0.1571 1 1
+			children [USE Reta_Horizontal
+				Transform {
+					translation 0 0 -40.3
+					children[USE Reta_Horizontal]
+				}
+			]
+		}
+	]
+}
+
+#Traves
+DEF Trave Transform {
+	translation -52.5 1.2 3.65
+	children [
+		DEF Traves Shape {
+			appearance USE White
+			geometry Cylinder {
+				height 2.4
+				radius 0.15
+				bottom FALSE
+				top FALSE
+			}
+		}
+		Transform {
+			translation 0 0 -7.3
+			children [USE Traves]
+		}
+		Transform {
+			translation 0 1.2 -3.65
+			rotation 1 0 0 1.570796
+			children [
+				Shape {
+					appearance USE White
+					geometry Cylinder {
+						height 7.3
+						radius 0.15
+						bottom FALSE
+						top FALSE
+					}
+				}
+			]
+		}
+		Transform {
+			translation 0 1.2 0
+			children [
+				DEF Canto_Trave Shape {
+					appearance USE White
+					geometry Sphere {
+						radius 0.15
+					}
+				}
+				Transform {
+					translation 0 0 -7.3
+					children [USE Canto_Trave]
+				}
+			]
+		}
+	]
+}
+Transform {
+	rotation 0 1 0 3.141593
+	children [USE Trave]
+}
+
+#Bandeiras de Escanteio
+DEF Bandeiras Transform {
+	translation -52.5 0.75 34
+	children [
+		DEF Barra_da_Bandeira Shape {
+			appearance USE White
+			geometry DEF barra Cylinder {
+				radius 0.05
+				height 1.5
+				bottom FALSE
+			}
+		}
+		DEF Bandeira Shape {
+        	appearance DEF Red Appearance {
+                material Material {
+                    diffuseColor 1 0 0
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        -0.03 0.75 0,        -0.03 0.35 0
+                        -0.23 0.1 0,         -0.18 0.6 0
+                        -0.19 0.59 -0.01,   -0.24 0.09 -0.01
+                        -0.11 0.04 -0.02,   -0.07 0.54 -0.02
+                        -0.07 0.53 -0.03,   -0.12 0.03 -0.03
+                        -0.18 -0.1 -0.025,   -0.13 0.49 -0.025                       
+                    ]
+                }
+                coordIndex [
+                    0 1 2 3 -1, 0 3 2 1 -1
+                    2 3 4 5 -1, 2 5 4 3 -1
+                    4 5 6 7 -1, 4 7 6 5 -1
+                    6 7 8 9 -1, 6 9 8 7 -1
+                    8 9 10 11 -1, 8 11 10 9 -1
+                ]
+            }
+        }
+		Transform {
+            translation 0.0025 0 0.0025
+            children [
+                USE Bandeira
+                Transform {
+                    translation 0.0025 0 0.0025
+                    children [USE Bandeira]
+                }
+            ]
+        }
+        Transform {
+            translation 0.0025 0 -0.0025
+            children [
+                USE Bandeira
+                Transform {
+                    translation 0.0025 0 -0.0025
+                    children [USE Bandeira]
+                }
+            ]
+        }
+		DEF Volta Transform {
+            translation 0 0.53 0
+            scale 1.01 0.27 1.01
+            children [
+                Shape {
+                    appearance USE Red
+                    geometry USE barra
+                }
+            ]
+        }
+		Transform {
+			translation 0 0 -68
+			children [
+				USE Barra_da_Bandeira
+				USE Bandeira
+				USE Volta
+			]
+		}
+	]
+}
+Transform {
+	rotation 0 1 0 3.141593
+	children [
+		USE Bandeiras
+	]
+}
+
+Viewpoint {
+	fieldOfView 1
+	position -52.5 1 35
+	#orientation 1 0 0 -1.570796
+}

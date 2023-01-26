@@ -1,0 +1,228 @@
+#VRML V2.0 utf8
+
+DEF Arqui Group {
+    children [
+        #Cantos
+        Shape {
+            appearance DEF Arquibancada Appearance {
+                material Material {
+					diffuseColor 0 0 0.5
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        #Top                vértices[0 - 4]
+                       -20           0      20,
+                       -25.625       0      19.375,
+                       -28.2         0      18.2,
+                       -29.375       0      15.625,
+                       -30           0      10,
+                       
+                       #Fileira Superior    vértices[5 - 9]
+                       -18.285714   -7      17.714285,
+                       -23.10714285 -7      17.17857142,
+                       -25.3142857  -7      16.1714285,
+                       -26.32142857 -7      13.96428571,
+                       -26.857142   -7      09.142857,
+                       
+                        #Base               vértices[10 - 14]
+                       -14          -15     12,
+                       -16.8125     -15     11.6875,
+                       -18.1        -15     11.1,
+                       -18.6875     -15     09.8125,
+                       -19          -15     07
+                    ]
+                }
+                coordIndex [
+                    5 10 11 6 -1, 5 6 1 0 -1, 
+                    6 11 12 7 2 1 -1,  7 12 13 8 3 2 -1
+                ]
+            }
+        }        
+        Shape {
+            appearance Appearance {
+                material Material {
+					diffuseColor 0 0 0.5
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        #Top                vértices[0 , 1]
+                       -29.375       0      15.625,
+                       -30           0      10,
+                       
+                       #Fileira Superior    vértices[2 , 3]
+                       -26.32142857 -7      13.96428571,
+                       -26.857142   -7      09.142857
+                    ]
+                }
+                coordIndex [ 2 3 1 0 -1 ]
+            }
+        }
+        Shape {
+            appearance Appearance {
+              material Material {
+					diffuseColor 0 0 0.5                   
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                       #Fileira Superior    vértices[0 , 1]
+                       -26.32142857 -7      13.96428571,
+                       -26.857142   -7      09.142857,
+                       
+                        #Base               vértices[2 , 3]
+                       -18.6875     -15     09.8125,
+                       -19          -15     07
+                    ]
+                }
+                coordIndex [ 0 2 3 1 -1 ]
+            }
+        }  
+        Shape {
+            appearance USE Arquibancada
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        -30           0   -10,
+                        -29.375       0   -15.625,
+                        -28.2         0   -18.2,
+                        -25.625       0   -19.375,
+                        -20           0   -20,
+
+                        -26.857142   -7   -09.142857,
+                        -26.32142857 -7   -13.96428571,
+                        -25.3142857  -7   -16.1714285,
+                        -23.10714285 -7   -17.17857142,
+                        -18.285714   -7   -17.714285,
+
+                        -19         -15   -07,
+                        -18.6875    -15   -09.8125,
+                        -18.1       -15   -11.1,
+                        -16.8125    -15   -11.6875,
+                        -14         -15   -12               
+                    ]
+                }
+                coordIndex [
+                    6 11 12 7 2 1 -1,
+                    7 12 13 8 3 2 -1,
+                    8 13 14 9 -1, 8 9 4 3 -1
+                ]
+            }
+        }
+        Shape {
+            appearance Appearance {
+                material Material {
+					diffuseColor 0 0 0.5
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        -30           0   -10,
+                        -29.375       0   -15.625,
+
+                        -26.857142   -7   -09.142857,
+                        -26.32142857 -7   -13.96428571
+                    ]
+                }
+                coordIndex [ 2 3 1 0 -1 ]
+            }
+        }
+        Shape {
+            appearance Appearance {
+               material Material {
+					diffuseColor 0 0 0.5
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        -26.857142   -7   -09.142857,
+                        -26.32142857 -7   -13.96428571,
+
+                        -19         -15   -07,
+                        -18.6875    -15   -09.8125,
+                    ]
+                }
+                coordIndex [ 0 2 3 1 -1 ]
+            }
+        }
+
+        #Faces laterais
+        Shape {
+            appearance Appearance {
+                material Material {
+					diffuseColor 1 0 0
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        -20          0 20,          20          0 20,
+                        -18.285714  -7 17.714285,   18.285714  -7 17.714285,
+                        -14        -15 12,          14        -15 12
+                    ]
+                }
+                coordIndex [3 5 4 2 0 1 -1]
+            }
+        }
+
+        #Face Atrás do Gol
+        Shape {
+            appearance DEF Leon Appearance {
+               material Material {
+					diffuseColor 0 0 0.5
+                    }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        -30          0 10,          -30          0 -10,
+                        -26.857142  -7 09.142857,   -26.857142  -7 -09.142857,
+                        -19        -15 07,          -19        -15 -07,
+                    ]
+                }
+                coordIndex [2 4 5 3 1 0 -1]
+            }
+        } 
+    ]
+}
+
+Transform {
+    rotation 0 1 0 3.141593
+    children [USE Arqui]
+}
+
+Viewpoint {
+    fieldOfView 1
+    position -20 10 10
+    orientation 1 0 0 -1.570796
+}
+
+Transform {
+	translation	-18 -7 -16
+	rotation 1 0 0 -0.57
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 1 1 1
+
+				}}
+				geometry Text {
+					string "SALZBURG"
+					fontStyle FontStyle	{
+						family "SANS"
+						style "BOLD"
+						size 7
+					}
+				}
+				
+			}
+
+	]
+}

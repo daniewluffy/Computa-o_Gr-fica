@@ -1,0 +1,386 @@
+#VRML V2.0 utf8
+
+#Arena Salzburg- Salzburg( ÁUSTRIA)
+
+Group {
+	children [
+		#Corpo
+		Transform {
+			translation 0 10 0
+			children [
+				Inline {
+					url "Corpo.wrl"
+				}
+				Transform {
+					children [
+						Inline {
+							url "Arquibancada.wrl"
+						}
+					]
+				}
+			]
+		}
+		#Campo
+		Transform {
+			translation 0 -5 0
+			scale 0.3 0.3 0.3
+			children [
+				Inline {
+					url "Campo.wrl"
+				}
+			]
+		}
+		#Blocos
+		DEF BLOCOS Transform {
+			translation 20 0 30
+			rotation 0 1 0 -1.570796
+			children[
+				DEF Bloco Inline{
+					url "Bloco.wrl"
+				}
+				Transform{
+					translation 0 0 40
+					children[USE Bloco]			
+				}
+				Transform{
+					translation 0 0 20
+					children[USE Bloco]			
+				}
+				Transform{
+					translation -50 0 -20
+					rotation 0 1 0 1.570796
+					children[USE Bloco]
+				}
+				Transform{
+					translation -42 0 -20
+					rotation 0 1 0 1.570796
+					children[USE Bloco]
+				}
+				Transform{
+					translation -34 0 -20
+					rotation 0 1 0 1.570796
+					children[USE Bloco]
+				}
+				Transform{
+					translation -26 0 -20
+					rotation 0 1 0 1.570796
+					children[USE Bloco]
+				}
+				Transform{
+					translation -18 0 -20
+					rotation 0 1 0 1.570796
+					children[USE Bloco]
+				}
+				Transform{
+					translation -10 0 -20
+					rotation 0 1 0 1.570796
+					children[USE Bloco]
+				}
+			]
+		}
+		Transform {
+			rotation 0 1 0 3.141593
+			children [USE BLOCOS]
+		}
+		
+		#Barras Superiores
+		DEF Barras_Superiores Transform {
+			translation -17.5 10.5 0
+			scale 0.87 0.5 1
+			children [
+				DEF Barras Inline {
+					url "Barras.wrl"
+				}
+				Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras]
+				}]}]}]}]}]}
+				Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras]
+				}]}]}]}]}]}
+				Transform {
+					translation 17.5 0 11.75
+					rotation 0 1 0 1.570796
+					scale 0.57 1 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					Transform {
+					translation 0 0 1
+					children [USE Barras
+					]}]}]}]}]}]}]}]}]}]}]}]}]}]}
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+					Transform {
+					translation 0 0 -1
+					children [USE Barras
+				]}]}]}]}]}]}]}]}]}]}
+				#Cantos
+				Transform {
+					translation 0.2 0 6.6
+					rotation 0 1 0 0.087266 #5
+					scale 1.02 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 0.3 0 7.4
+					rotation 0 1 0 0.209439 #12
+					scale 1.04 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 0.1 0 8.6
+					rotation 0 1 0 0.314159 #18
+					scale 1.03 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 0.6 0 9.6
+					rotation 0 1 0 0.436332 #25
+					scale 1.06 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 1.1 0 10.6
+					rotation 0 1 0 0.523599 #30
+					scale 1.07 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 2.3 0 11
+					rotation 0 1 0 0.698131 #40
+					scale 0.925 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 3.6 0 11.35
+					rotation 0 1 0 0.872664 #50
+					scale 0.785 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 4.9 0 11.5
+					rotation 0 1 0 1.047197 #60
+					scale 0.685 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 6.2 0 11.6
+					rotation 0 1 0 1.186823 #70
+					scale 0.625 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 7.4 0 11.7
+					rotation 0 1 0 1.396263 #80
+					scale 0.585 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 7.4 0 -11.7
+					rotation 0 1 0 -1.396263
+					scale 0.585 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 6.2 0 -11.6
+					rotation 0 1 0 -1.186823
+					scale 0.625 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 4.9 0 -11.5
+					rotation 0 1 0 -1.047197
+					scale 0.685 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 3.6 0 -11.35
+					rotation 0 1 0 -0.872664
+					scale 0.785 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 2.3 0 -11
+					rotation 0 1 0 -0.698131
+					scale 0.925 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 1.1 0 -10.6
+					rotation 0 1 0 -0.523599
+					scale 1.08 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 0.6 0 -9.6
+					rotation 0 1 0 -0.436332
+					scale 1.06 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 0.1 0 -8.6
+					rotation 0 1 0 -0.314159
+					scale 1.03 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 0.3 0 -7.4
+					rotation 0 1 0 -0.209439
+					scale 1.04 1 1
+					children [USE Barras]
+				}
+				Transform {
+					translation 0.2 0 -6.6
+					rotation 0 1 0 -0.087266
+					scale 1.02 1 1
+					children [USE Barras]
+				}
+			]
+		}
+		Transform {
+			rotation 0 1 0 3.141593
+			children [USE Barras_Superiores]
+		}
+		#Barra Circular
+		
+		#Piso Externo
+		Transform {
+			translation 0 -5 0
+			scale 0.8 1 0.9
+			children [
+				Inline {
+					url "Piso.wrl"
+				}
+			]
+		}
+	]
+}
+
+Viewpoint {
+    fieldOfView 1
+    position 0 20 10
+    orientation 1 0 0 -1.570796
+}
+
+Transform {
+	children [
+Inline {
+	url	"cobertura.wrl"
+}
+]
+}
+
+Transform {
+	children[
+		Inline {
+			url	"lateral.wrl"
+		}
+	]
+}
+
+Transform {
+	children[
+		Inline {
+			url	"escadaria.wrl"
+		}
+	]
+}
+
+Transform {
+	children[
+		Inline {
+			url	"solo.wrl"
+		}
+	]
+}
